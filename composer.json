@@ -1,0 +1,18 @@
+{
+    "name": "holyhope/wp-pendo",
+    "description": "WordPress plugin to integrate Pendo.io",
+    "license": "BSD-4-Clause",
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*|5.7.*",
+        "yoast/phpunit-polyfills": "^1.0",
+        "wp-cli/wp-cli-bundle": "^2.6"
+    },
+    "scripts" : {
+        "post-install-cmd" : [
+            "test -f /usr/bin/wp || sudo ln -s /var/www/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp"
+        ],
+        "test": [
+            "phpunit"
+        ]
+    }
+}
